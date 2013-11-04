@@ -8,4 +8,8 @@ class PicturesController < ApplicationController
       @picture.caption = "Sorry this picture does not exist. There are only #{Picture.count} pictures to display (numbered from 1 to #{Picture.count})"
     end
   end
+
+  def index
+    @all_pictures = Picture.all
+  end
 end
