@@ -12,4 +12,11 @@ class PicturesController < ApplicationController
   def index
     @all_pictures = Picture.all
   end
+
+  def new
+  end
+
+  def create
+  end
+
 end
