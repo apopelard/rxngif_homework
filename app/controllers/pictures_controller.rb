@@ -17,6 +17,10 @@ class PicturesController < ApplicationController
   end
 
   def create
+    @new_picture = Picture.new
+    @new_picture.caption = params[:caption]
+    @new_picture.source = params[:source]
+    @new_picture.save
   end
 
 end
