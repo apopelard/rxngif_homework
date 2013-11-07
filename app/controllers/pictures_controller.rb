@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
   def show
-    if (params[:id].to_i < Picture.count + 1) && (params[:id].to_i > 1)
+    if (params[:id].to_i < Picture.count + 1) && (params[:id].to_i > 0)
       @picture = Picture.find(params[:id])
     else
       @picture = Picture.new
@@ -21,6 +21,10 @@ class PicturesController < ApplicationController
     @new_picture.caption = params[:caption]
     @new_picture.source = params[:source]
     @new_picture.save
+  end
+
+  def destroy
+    Picture.find(params[:id]).destroy
   end
 
 end
