@@ -1,16 +1,27 @@
-<h1>Picture Details</h1>
+<div class="row text-center">
+  <h1>Picture Details</h1>
+</div>
 
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4 well text-center">
+    <p>
+      <h3>
+        <a href="http://localhost:3000/delete_picture/<%= @picture.id %>">Delete this picture</a>
+      </h3>
+    </p>
+    <p>
+      <img width =250 src="<%= @picture.source %>">
+    </p>
+    <p>
+      <%= @picture.caption %>
+    </p>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
 
-<p>
-  <a href="http://localhost:3000/delete_picture/<%= @picture.id %>">Delete this picture</a>
-</p>
-
-<img width =150 src="<%= @picture.source %>">
-
-<p>
-  <%= @picture.caption %>
-</p>
-
-<p>
-  <a href="http://localhost:3000/all_pictures">View all pictures</a>
-</p>
+<div class="row text-center">
+  <h3>
+    <a href="http://localhost:3000/all_pictures">View all pictures</a>
+  </h3>
+</div>

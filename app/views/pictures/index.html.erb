@@ -1,13 +1,24 @@
-<h1>All the Pictures</h1>
+<div class="row">
+  <h1 class="text-center">
+    All the Pictures
+  </h1>
+</div>
 
-<a href="http://localhost:3000/new_picture_form">Add a new picture</a>
+<div class="row">
+  <h3 class="text-center">
+     <a href="http://localhost:3000/new_picture_form">Add a new picture</a>
+  </h3>
+</div>
 
-<ul>
-  <% @all_pictures.each do |picture| %>
-  <li>
-    <img width =150 src="<%= picture.source %>">
-    <p><%= picture.caption %></p>
-    <p><a href="http://localhost:3000/picture_details/<%= picture.id %>">Show</a> | <a href="http://localhost:3000/edit_picture_form/<%= picture.id %>">Edit</a> | <a href="http://localhost:3000/delete_picture/<%= picture.id %>">Destroy</a></p>
-  </li>
-  <% end %>
-</ul>
+<% @all_pictures.each do |picture| %>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 well text-center">
+      <p><img width =150 src="<%= picture.source %>"></p>
+      <p><%= picture.caption %></p>
+      <p><a href="http://localhost:3000/picture_details/<%= picture.id %>">Show</a> | <a href="http://localhost:3000/edit_picture_form/<%= picture.id %>">Edit</a> | <a href="  http://localhost:3000/delete_picture/<%= picture.id %>">Delete</a></p>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+<% end %>
+
