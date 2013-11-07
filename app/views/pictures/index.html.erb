@@ -5,7 +5,7 @@
   <li>
     <img width =150 src="<%= picture.source %>">
     <p><%= picture.caption %></p>
-    <p><a href="http://localhost:3000/picture_details/<%= picture.id %>">Show</a> | <a href="">Edit</a> | <a href="">Destroy</a></p>
+    <p><a href="http://localhost:3000/picture_details/<%= picture.id %>">Show</a> | <a href="http://localhost:3000/edit_picture_form/<%= picture.id %>">Edit</a> | <a href="http://localhost:3000/delete_picture/<%= picture.id %>">Destroy</a></p>
   </li>
   <% end %>
 </ul>
