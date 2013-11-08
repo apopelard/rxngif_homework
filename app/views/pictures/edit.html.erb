@@ -1,6 +1,6 @@
 <h1>Edit An Existing Picture</h1>
 
-<form action="http://localhost:3000/update_picture/<%= @picture.id %>">
+<%= form_tag(picture_url(@picture.id), method: "patch") do %>
   <div>
     <label for="the_caption">Caption:</label>
     <input id="the_caption" type="text" name="caption" value="<%= @picture.caption %>">
@@ -12,4 +12,4 @@
   <div>
     <input type="submit" value="Update Picture">
   </div>
-</form>
+<% end %>

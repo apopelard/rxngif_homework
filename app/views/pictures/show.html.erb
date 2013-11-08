@@ -6,12 +6,7 @@
   <div class="col-sm-4"></div>
   <div class="col-sm-4 well text-center">
     <p>
-      <h3>
-        <a href="http://localhost:3000/delete_picture/<%= @picture.id %>">Delete this picture</a>
-      </h3>
-    </p>
-    <p>
-      <img width =250 src="<%= @picture.source %>">
+      <%= image_tag(@picture.source, width: 250) %>
     </p>
     <p>
       <%= @picture.caption %>
@@ -22,6 +17,6 @@
 
 <div class="row text-center">
   <h3>
-    <a href="http://localhost:3000/all_pictures">View all pictures</a>
+    <%= link_to "View all pictures", pictures_url %>
   </h3>
 </div>
