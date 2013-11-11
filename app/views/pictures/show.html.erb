@@ -6,7 +6,7 @@
   <div class="col-sm-4"></div>
   <div class="col-sm-4 well text-center">
     <p>
-      <%= image_tag(@picture.source, width: 250) %>
+      <%= image_tag(@picture.source, :width => 250) %>
     </p>
     <p>
       <%= @picture.caption %>
@@ -17,6 +17,6 @@
 
 <div class="row text-center">
   <h3>
-    <%= link_to "View all pictures", pictures_url %>
+    <%= link_to "View all pictures", posts_url, :class => "btn btn-primary" %>
   </h3>
 </div>

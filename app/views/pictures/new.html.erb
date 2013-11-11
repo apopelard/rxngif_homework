@@ -1,15 +1,15 @@
 <h1>Add A New Picture</h1>
 
-<%= form_tag(pictures_url, method: "post") do %>
-  <div>
-    <label for="the_caption">Caption:</label>
-    <input id="the_caption" type="text" name="caption">
-  </div>
-  <div>
-    <label for="image_url">Image URL:</label>
-    <input id="image_url" type="text" name="source">
-  </div>
-  <div>
-    <input type="submit" value="Create Picture">
-  </div>
+<%= form_tag(posts_url, method: "post") do %>
+  <p>
+    <%= label_tag :caption, "Caption:" %>
+    <%= text_field_tag :caption %>
+  </p>
+  <p>
+    <%= label_tag :source, "Image URL:" %>
+    <%= text_field_tag :source %>
+  </p>
+  <p>
+    <%= submit_tag "Create Picture" %>
+  </p>
 <% end %>

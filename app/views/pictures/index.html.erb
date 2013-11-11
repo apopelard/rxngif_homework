@@ -6,7 +6,7 @@
 
 <div class="row">
   <h3 class="text-center">
-    <%= link_to "Add a new picture", new_picture_url %>
+    <%= link_to "Add a new picture", new_post_url, :class => "btn btn-primary" %>
   </h3>
 </div>
 
@@ -14,12 +14,12 @@
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4 well text-center">
-      <p><img width =150 src="<%= picture.source %>"></p>
+      <p><%= image_tag(picture.source, :width => 150) %></p>
       <p><%= picture.caption %></p>
       <p>
-        <%= link_to "Show", picture_url(picture.id) %> |
-        <%= link_to "Edit", edit_picture_url(picture.id) %> |
-        <%= link_to "Delete", picture_url(picture.id), method: "delete" %>
+        <%= link_to "Show", post_url(picture.id), :class => "btn btn-xs btn-primary" %> |
+        <%= link_to "Edit", edit_post_url(picture.id), :class => "btn btn-xs btn-primary" %> |
+        <%= link_to "Delete", post_url(picture.id), :class => "btn btn-xs btn-danger", method: "delete" %>
       </p>
     </div>
     <div class="col-sm-4"></div>

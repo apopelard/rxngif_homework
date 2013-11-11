@@ -16,14 +16,14 @@ class PicturesController < ApplicationController
     @new_picture.source = params[:source]
     @new_picture.save
 
-    redirect_to("#{pictures_url}", notice: "Your picture was created successfully")
+    redirect_to("#{post_url(@new_picture.id)}", notice: "Your picture was created successfully")
 
   end
 
   def destroy
     Picture.find(params[:id]).destroy
 
-    redirect_to("#{pictures_url}", notice: "Your picture was deleted successfully")
+    redirect_to("#{posts_url}", notice: "Your picture was deleted successfully")
   end
 
   def edit
@@ -36,7 +36,7 @@ class PicturesController < ApplicationController
     @picture.caption = params[:caption]
     @picture.save
 
-    redirect_to("#{pictures_url}", notice: "Your picture was updated successfully")
+    redirect_to("#{posts_url}", notice: "Your picture was updated successfully")
   end
 
 end
